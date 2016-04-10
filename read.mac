@@ -1,0 +1,16 @@
+;read.mac
+
+read  macro ar,n		; ar is the array in which reading have to be stored
+
+	  	mov si,00h
+again:	mov ah,01h
+ 		int 21h
+		cmp al,0dh
+		je stopr
+		mov al,ar[si]
+		inc si
+		jmp again
+
+stopr:	mov n,si	; end of the the reading
+
+endm read
