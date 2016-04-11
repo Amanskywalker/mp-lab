@@ -7,7 +7,7 @@ again:	mov ah,01h
  		int 21h
 		cmp al,0dh
 		je stopr
-		mov al,ar[si]
+		mov ar[si],al
 		inc si
 		jmp again
 
