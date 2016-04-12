@@ -21,9 +21,13 @@
   b1 char "bad"
   b2 char "worst"
 
+  ;pointer to the arrays
+  gptr pchar g1,g2,g3
+  bptr pchar b1,b2
+
   ;number of words for positive and negative review
-  gw db 00h
-  bw db 00h
+  gw db 03h
+  bw db 02h
 
   ; counter to count the score
   gc db 00h
@@ -44,7 +48,22 @@
 
   read uip n      ;macro to read from user
 
-lp1 :
+  mov si,00h
+
+lp1:
+    cmp uip[si],20h
+    je compare
+    mov ax,uip[si]
+    mov tstr[si],ax
+    mov ax,n
+    cmp si,n
+    inc si
+    je exit
+    jmp lp1
+
+compare:
+
+
   ; process to read from user input string using space as delimiter
   ;and using strcmp to find wether give word matches or not and increment the appropriate counter
   ;at last printing the result
