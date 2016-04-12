@@ -85,7 +85,7 @@ compare:
 cpg:
     strcmp tstr gptr[si] ax t2
     mov ax,t2
-    cmp ax,01h    ; if result is true
+    cmp ax,00h    ; if result is true
     je loc1
     mov ax,gw
     cmp si,gw
@@ -96,7 +96,7 @@ cpg:
 cpb:
     strcmp tstr bptr[si] ax t2
     mov ax,t2
-    cmp ax,01h    ; if result is true
+    cmp ax,00h    ; if result is true
     je loc2
     mov ax,bw
     cmp si,bw

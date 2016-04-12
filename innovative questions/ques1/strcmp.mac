@@ -1,4 +1,4 @@
-; macro to match two given string and return 1 if true and 0 if its false
+; macro to match two given string and return 0 if true and anything else if its false
 
 strcmp macro str1 str2 sz retv   ; retv is the result of the comparison
 
@@ -8,10 +8,6 @@ strcmp macro str1 str2 sz retv   ; retv is the result of the comparison
       mov cl,sz
       cld
       repz cmpsb
-      cmp cx,00h
-      jnz rett      ; jump to return true
-      mov retv,00h
-
-rett: mov retv,01h  ; return true value
+      mov retv,cx  
 
 endm strcmp
