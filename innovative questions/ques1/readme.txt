@@ -15,7 +15,7 @@ Approach to solve the problem:
 	……
 	bad1=bad
 	bad2=worst
-	….
+	…
 2.Ask the review as input from user.
 
 3.Divide the input into words and compare it with good and bad words, increment a counter variable for each match.
