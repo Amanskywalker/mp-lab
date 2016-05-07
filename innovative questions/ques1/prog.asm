@@ -4,8 +4,9 @@
 .data
   ;typedef
   ;defining few c word to feel like c language
+  byte typedef db
   char typedef byte
-  pchar typedef ptr byte    ; pointer to char
+  pchar typedef ptr char    ; pointer to char
 
 
   ipmsg char 10,13,"Enter your the review about the product :$"
