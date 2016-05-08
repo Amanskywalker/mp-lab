@@ -3,7 +3,7 @@
 ; logic in c or c++ program
 ;  n is the size of array
 
-; for(int i=0;i<n;++i)
+; for(int i=n;i<0;i--)
 ;   for(int j=0;j<n;++j)
 ;	    if (a[i]>a[j])
 ;		    SWAP(a[i],a[j]);
@@ -19,7 +19,7 @@
 
 
 .code
-	mov ax,@data                        ; accessing the data segment
+	mov ax,@data                          ; accessing the data segment
 	mov ds,ax
     mov dx,lng-1                        ; copying lng into register dx which act as number of passes in the program
 
@@ -45,4 +45,7 @@ nochange:
     mov ah,4ch
     int 21h
 
-end                                            
+end
+
+;By
+;Aman
