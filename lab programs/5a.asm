@@ -70,4 +70,3 @@ exit:
     int 21h
 
 end
-    
