@@ -7,8 +7,8 @@
     tmp2 db 00h
 
 .code
-	mov ax,@data
-	mov ds,ax
+	  mov ax,@data
+	  mov ds,ax
 
     mov ah,0fh  ; to get current video mode
     int 10h
