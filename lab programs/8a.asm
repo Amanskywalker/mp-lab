@@ -54,6 +54,7 @@ rn: add ncr,ax
 ncrpro endp
 
 ; here goes the procedure to display the the optput
+; very minimal only displaying the ncr value 
 convdisp proc
 
     aam
