@@ -7,7 +7,7 @@ printf macro msg
 	endm printf
 
 .data
-	ask db 10,13,"enter string:$"	
+	ask db 10,13,"enter string:$"
 	original db 50 dup("$")
 	reverse db 50 dup("$")
 	pal db 10,13,"its palindrome$"
@@ -18,7 +18,6 @@ printf macro msg
 	mov ds,ax
 	mov es,ax
 
-	
 	mov cx,0
 	lea si,original
 	lea di,reverse
@@ -60,25 +59,8 @@ jmp exit
 pali:
 		printf pal
 
-exit:	
+exit:
 		mov ah,4ch
 		int 21h
 
 		end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

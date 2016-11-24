@@ -36,7 +36,7 @@ up2:dec dx
 
 disp proc
 
-    aam
+  aam
 	add ax,3030h
 	mov bx,ax
 	mov dl,ah
